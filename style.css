@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(140, 203, 140);
+}
+#main-body{
+    height: 80%;
+    width: 90%;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    overflow: hidden;
+}
+#main-body-top{
+    height: 10%;
+    width: 100%;
+    background-color: rgb(86, 177, 86);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.elem{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.text-box{
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    color: #000;
+    font-weight: 700;
+    font-size: 17px;
+}
+#main-body-bottom{
+    width: 100%;
+    height: 90%;
+    padding: 20px;
+    display: flex;
+    flex-wrap:wrap;
+    gap: 10px;
+
+}
+.bubble{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(86, 177, 86);
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+}
+.bubble:hover{
+    background-color: rgb(68, 156, 68);
+    color: black;
+    cursor: pointer;
+}
+#scoreid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    color: green;
+    font-size: 5vw;
+}
+
+@media (max-width: 768px) {
+    #main-body {
+        width: 95%; /* Adjust width for smaller screens */
+    }
+
+    .text-box {
+        font-size: 0.9rem; /* Slightly smaller text */
+    }
+    
+    .bubble {
+        height: 10vw; 
+        width: 10vw;
+        font-size: 3vw; 
+    }
+}
+
+@media (max-width: 480px) {
+    #main-body {
+        height: 90%; /* Use more vertical space on small screens */
+    }
+
+    .text-box {
+        font-size: 0.8rem; /* Smaller text */
+    }
+
+    .bubble {
+        height: 12vw; /* Further increase size for touch */
+        width: 12vw;
+        font-size: 4vw; /* Adjust font size */
+    }
+}
